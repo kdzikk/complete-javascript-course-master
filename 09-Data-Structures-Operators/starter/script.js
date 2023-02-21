@@ -32,25 +32,33 @@ const restaurant = {
   },
 };
 
-const { name, openingHours, categories } = restaurant;
-console.log(name, openingHours, categories);
+// const { name, openingHours, categories } = restaurant;
+// console.log(name, openingHours, categories);
 
-const {
-  name: restaurantName,
-  openingHours: hours,
-  categories: tags,
-} = restaurant;
+// const {
+//   name: restaurantName,
+//   openingHours: hours,
+//   categories: tags,
+// } = restaurant;
 
-console.log(restaurantName, hours, tags);
+// console.log(restaurantName, hours, tags);
 
-const { menu = [], starterMenu: starters = [] } = restaurant;
-console.log(menu, starters);
+// // Default values
+// const { menu = [], starterMenu: starters = [] } = restaurant;
+// console.log(menu, starters);
 
-let a = 222;
-let b = 555;
-const obj = { a: 2, b: 1, c: 5 };
-({ a, b } = obj);
-console.log(a, b);
+// // Mutating variables
+// let a = 222;
+// let b = 555;
+// const obj = { a: 2, b: 1, c: 5 };
+// ({ a, b } = obj);
+// console.log(a, b);
+
+// //Nested objects
+// const {
+//   fri: { open: o, close: c },
+// } = openingHours;
+// console.log(o, c);
 
 // let [first, , second] = restaurant.categories;
 // [first, second] = [second, first];
@@ -62,3 +70,6 @@ console.log(a, b);
 // const nested = [2, 4, [5, 6]];
 // const [q, , [e, r]] = nested;
 // console.log(q, e, r);
+
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+console.log(newMenu);
