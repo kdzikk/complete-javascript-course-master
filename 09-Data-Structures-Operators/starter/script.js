@@ -32,13 +32,33 @@ const restaurant = {
   },
 };
 
-let [first, , second] = restaurant.categories;
-[first, second] = [second, first];
-console.log(first, second);
+const { name, openingHours, categories } = restaurant;
+console.log(name, openingHours, categories);
 
-const [firstMeal, secondMeal] = restaurant.order(2, 0);
-console.log(firstMeal, secondMeal);
+const {
+  name: restaurantName,
+  openingHours: hours,
+  categories: tags,
+} = restaurant;
 
-const nested = [2, 4, [5, 6]];
-const [q, , [e, r]] = nested;
-console.log(q, e, r);
+console.log(restaurantName, hours, tags);
+
+const { menu = [], starterMenu: starters = [] } = restaurant;
+console.log(menu, starters);
+
+let a = 222;
+let b = 555;
+const obj = { a: 2, b: 1, c: 5 };
+({ a, b } = obj);
+console.log(a, b);
+
+// let [first, , second] = restaurant.categories;
+// [first, second] = [second, first];
+// console.log(first, second);
+
+// const [firstMeal, secondMeal] = restaurant.order(2, 0);
+// console.log(firstMeal, secondMeal);
+
+// const nested = [2, 4, [5, 6]];
+// const [q, , [e, r]] = nested;
+// console.log(q, e, r);
