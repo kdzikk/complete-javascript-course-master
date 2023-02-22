@@ -15,7 +15,9 @@ const restaurant = {
   order: function (firstMeal, secondMeal) {
     return [this.starterMenu[firstMeal], this.starterMenu[secondMeal]];
   },
-
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(`Here is delicous pasta with ${ing1}, ${ing2} and ${ing3}`);
+  },
   openingHours: {
     thu: {
       open: 12,
@@ -71,5 +73,14 @@ const restaurant = {
 // const [q, , [e, r]] = nested;
 // console.log(q, e, r);
 
-const newMenu = [...restaurant.mainMenu, 'Gnocci'];
-console.log(newMenu);
+// const newMenu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+// console.log(newMenu);
+
+const ingredients = [
+  prompt("Let's make pasta! Igredient 1?"),
+  prompt('Igredient 2?'),
+  prompt('Igredient 3?'),
+];
+// console.log(ingredients);
+
+restaurant.orderPasta(...ingredients);
